@@ -15,7 +15,6 @@ with open('random_number.txt', 'r') as file:
 
 
 integer_lines = [list(map(int, line.split())) for line in lines]
-
 filtered_lines = [list(filter(lambda x : x > 40, line)) for line in integer_lines]
 
 
