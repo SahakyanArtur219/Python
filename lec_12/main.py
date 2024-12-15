@@ -15,7 +15,6 @@ with open('random_number.txt', 'r') as file:
 
 
 integer_lines = [list(map(int, line.split())) for line in lines]
-
 filtered_lines = [list(filter(lambda x : x > 40, line)) for line in integer_lines]
 
 
@@ -23,7 +22,7 @@ filtered_lines = [list(filter(lambda x : x > 40, line)) for line in integer_line
 
 with open('filtered_number.txt', 'w') as file:
     for l in filtered_lines:
-        file.write(' '.join(map(str,line)) + '\n')
+        file.write(' '.join(map(str,l)) + '\n')
 
 
 
@@ -31,7 +30,7 @@ with open('filtered_number.txt', 'w') as file:
 def read_file_generator(file_name):
     with open(file_name, 'r') as file:
         for l in file:
-            yield list(map(int, line.split()))
+            yield list(map(int, l.split()))
 
 
 
